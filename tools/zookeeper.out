@@ -1,0 +1,22 @@
+2018-07-01 08:19:25,787 [myid:] - INFO  [main:QuorumPeerConfig@124] - Reading configuration from: /opt/zookeeper/bin/../conf/zoo.cfg
+2018-07-01 08:19:25,809 [myid:] - INFO  [main:QuorumPeer$QuorumServer@149] - Resolved hostname: master to address: master/192.100.50.156
+2018-07-01 08:19:25,809 [myid:] - INFO  [main:QuorumPeer$QuorumServer@149] - Resolved hostname: slaver2 to address: slaver2/192.100.50.164
+2018-07-01 08:19:25,810 [myid:] - INFO  [main:QuorumPeer$QuorumServer@149] - Resolved hostname: slaver1 to address: slaver1/192.100.50.163
+2018-07-01 08:19:25,810 [myid:] - INFO  [main:QuorumPeerConfig@352] - Defaulting to majority quorums
+2018-07-01 08:19:25,812 [myid:1] - INFO  [main:DatadirCleanupManager@78] - autopurge.snapRetainCount set to 3
+2018-07-01 08:19:25,812 [myid:1] - INFO  [main:DatadirCleanupManager@79] - autopurge.purgeInterval set to 0
+2018-07-01 08:19:25,812 [myid:1] - INFO  [main:DatadirCleanupManager@101] - Purge task is not scheduled.
+2018-07-01 08:19:25,829 [myid:1] - INFO  [main:QuorumPeerMain@127] - Starting quorum peer
+2018-07-01 08:19:25,840 [myid:1] - INFO  [main:NIOServerCnxnFactory@89] - binding to port 0.0.0.0/0.0.0.0:2181
+2018-07-01 08:19:25,841 [myid:1] - ERROR [main:QuorumPeerMain@89] - Unexpected exception, exiting abnormally
+java.net.BindException: Address already in use
+	at sun.nio.ch.Net.bind0(Native Method)
+	at sun.nio.ch.Net.bind(Net.java:433)
+	at sun.nio.ch.Net.bind(Net.java:425)
+	at sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:223)
+	at sun.nio.ch.ServerSocketAdaptor.bind(ServerSocketAdaptor.java:74)
+	at sun.nio.ch.ServerSocketAdaptor.bind(ServerSocketAdaptor.java:67)
+	at org.apache.zookeeper.server.NIOServerCnxnFactory.configure(NIOServerCnxnFactory.java:90)
+	at org.apache.zookeeper.server.quorum.QuorumPeerMain.runFromConfig(QuorumPeerMain.java:130)
+	at org.apache.zookeeper.server.quorum.QuorumPeerMain.initializeAndRun(QuorumPeerMain.java:111)
+	at org.apache.zookeeper.server.quorum.QuorumPeerMain.main(QuorumPeerMain.java:78)
